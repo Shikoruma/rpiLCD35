@@ -1,0 +1,18 @@
+##########################
+## auto launch the Menu ##
+##########################
+
+# launch Menu only when main (non gui) terminal loads (once per boot)
+# do not run Menu when shell is launched within GUI, or from SSH
+#   TERM value = 'linux' when at main non-gui terminal
+#   and 'xterm' for a shell launched from the GUI
+
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+   #echo Session is remote / ssh.
+   # : is a no-op
+   :
+else
+   if [ "$TERM" = "linux" ]; then
+           /home/pi/bin/selector.sh    #run the menu script
+   fi
+fi

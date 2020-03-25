@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Desktop autostart for secondary display
+Comment=Start the LXDE environment on secondary display
+Exec=/home/pi/bin/desktopmgr.sh
+OnlyShowIn=LXDE
+
